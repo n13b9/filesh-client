@@ -10,11 +10,11 @@ import { useDispatch } from 'react-redux';
 import { logIn,logOut } from '@/redux/features/authSlice';
 
 
-let socket:any = null;
+// let socket:any = null;
 //let apiurl:string = process.env.NEXT_PUBLIC_API_URL 
 
 
-const  page = () => {
+const  Page = () => {
 
   const router = useRouter();
   const auth = useAppSelector(state=>state.authReducer)
@@ -174,11 +174,11 @@ const  page = () => {
         {
           isDragActive ?
             <p>Drop the files here ...</p> :
-            <p>Drag 'n' drop some files here, or click to select files</p>
+            <p>Drag n drop some files here, or click to select files</p>
         }
       </div>
     </div>
   )
 }
 
-export default page 
+export default Page 
