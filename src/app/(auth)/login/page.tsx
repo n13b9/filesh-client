@@ -58,22 +58,22 @@ const Page = () => {
         console.log(error);
       });
 
-      getUserData()
+      //getUserData()
   }
 
-  const getUserData = async ()=>{
+  // const getUserData = async ()=>{
 
-    let res = await axios.get(process.env.NEXT_PUBLIC_API_URL + '/auth/getuser',{
-      headers: {'content-type': 'application/json'},
-      withCredentials:true, 
-    })
+  //   let res = await axios.get(process.env.NEXT_PUBLIC_API_URL + '/auth/getuser',{
+  //     headers: {'content-type': 'application/json'},
+  //     withCredentials:true, 
+  //   })
     
-    console.log(res,"data")
+  //   console.log(res,"data")
 
-       dispatch(logIn(res.data))
-      setLoading(!loading)
-      router.push('/myfiles')
-  }
+  //      dispatch(logIn(res.data))
+  //     setLoading(!loading)
+  //     router.push('/myfiles')
+  // }
 
 
   return (

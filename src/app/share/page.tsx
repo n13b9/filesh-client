@@ -68,7 +68,10 @@ const  Page = () => {
 
   const uploadToS3Url = async (url:any)=>{
     const up = await axios.put(url,file
-      ,{withCredentials:true})
+      ,{headers: {
+        'Content-Type': file.type,
+        'Content-Length': file.size.toString(), 
+      },withCredentials:true})
         .then(function (response:any) {
           console.log(response);
         })
